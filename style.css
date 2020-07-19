@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(212, 212, 212);
+  }
+  
+  .grid {
+    background-color: rgba(0,0,0,.2);
+    margin: 50px auto;
+    vertical-align: center;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template rows: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 17px 50px;
+  }
+  
+  .space {
+    background-color: white;
+    transition: background-color .5s;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .space:hover {
+    background-color: rgba(0,0,0,0);
+    transition: background-color .5s;
+    cursor: pointer;
+  }
+  
+  .x, .o {
+   font-family: 'arial';
+   font-size: 70px;
+   position: absolute;
+  }
+  
+  .x {
+    color: rgb(255, 0, 0);
+  }
+  
+  .o {
+    color: #008cff;
+  }
+
+  .reset {
+    font-size: 20px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(248, 0, 0);
+    background-color: rgb(212,212,212);
+    border: 2px solid rgb(248, 0, 0);
+    padding: 5px;
+    transition: border, color, .5s;
+    cursor: pointer;
+  }
+
+  .reset:focus {
+    outline: none;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .p1, .p2 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+  }
+  
+  .p1 {
+    color: rgb(255, 0, 0);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  
+  .p2 {
+    color: #008cff;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
