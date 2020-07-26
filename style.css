@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  background: #14BDAC;
+  background: #00ccff;
   margin: 50px;
   padding: 50px;
   border-radius: 25px;
@@ -43,11 +43,11 @@ body {
 }
 
 .reset:hover {
-  color: #F2EBD3;
+  color: #000000;
 }
 
 .game-grid {
-  background: #0DA192;
+  background: #000000;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -56,7 +56,7 @@ body {
 }
 
 .game-cell {
-  background: #14BDAC;
+  background: #00CCFF;
   display: flex;
   justify-content: center;
   align-items: center;
