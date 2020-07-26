@@ -1,91 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: rgb(212, 212, 212);
-  }
-  
-  .grid {
-    background-color: rgba(0,0,0,.2);
-    margin: 50px auto;
-    vertical-align: center;
-    width: 400px;
-    height: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template rows: 1fr 1fr 1fr;
-    grid-gap: 2px;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 17px 50px;
-  }
-  
-  .space {
-    background-color: white;
-    transition: background-color .5s;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .space:hover {
-    background-color: rgba(0,0,0,0);
-    transition: background-color .5s;
-    cursor: pointer;
-  }
-  
-  .x, .o {
-   font-family: 'arial';
-   font-size: 70px;
-   position: absolute;
-  }
-  
-  .x {
-    color: rgb(255, 0, 0);
-  }
-  
-  .o {
-    color: #008cff;
+  color: #545454;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+.container {
+  background: #14BDAC;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title span {
+  color: #F2EBD3;
+}
+
+.status-action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  justify-content: space-around;
+  height: 30px;
+}
+
+.status span {
+  color: #F2EBD3;
+}
+
+.reset {
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: #F2EBD3;
+}
+
+.game-grid {
+  background: #0DA192;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 50px;
+}
+
+.game-cell {
+  background: #14BDAC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+.x,
+.o {
+  cursor: default;
+}
+
+.x::after {
+  content: '×';
+  font-size: 200px;
+}
+
+.o::after {
+  content: '○';
+  color: #F2EBD3;
+  font-size: 225px;
+}
+
+.won::after {
+  color: #BD022F;
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 10px;
   }
 
-  .reset {
-    font-size: 20px;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(248, 0, 0);
-    background-color: rgb(212,212,212);
-    border: 2px solid rgb(248, 0, 0);
-    padding: 5px;
-    transition: border, color, .5s;
-    cursor: pointer;
+  .game-cell {
+    height: 150px;
+    width: 150px;
   }
 
-  .reset:focus {
-    outline: none;
+  .x::after {
+    font-size: 150px;
   }
-  
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+
+  .o::after {
+    font-size: 175px;
   }
-  
-  .p1, .p2 {
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
   }
-  
-  .p1 {
-    color: rgb(255, 0, 0);
-    margin-left: 30px;
-    margin-top: 30px;
+
+  .game-cell {
+    height: 100px;
+    width: 100px;
   }
-  
-  .p2 {
-    color: #008cff;
-    margin-right: 30px;
-    margin-top: 30px;
+
+  .x::after {
+    font-size: 100px;
   }
-  
-  .flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+  .o::after {
+    font-size: 125px;
   }
+}
